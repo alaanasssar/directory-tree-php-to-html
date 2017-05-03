@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .file-tree {
+            background-color: #fafafa;
+            padding: 20px 10px 10px
+        }
+        
+        .file-tree ul {
+            list-style: none;
+            padding-left: 25px;
+            display: none
+        }
+        
+        .file-tree>ul {
+            display: block
+        }
+        
+        .file-tree li {
+            padding: 4px 0;
+            line-height: 24px
+        }
+        
+        .file-tree i {
+            margin-left: 24px;
+            display: block;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 20px;
+            color: #b4b7b8;
+            cursor: default;
+            transition: color .4s ease
+        }
+        
+        .file-tree li:hover>i {
+            color: #697376
+        }
+        
+        .file-tree .is-folder>span {
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-block;
+            min-width: 120px
+        }
+        
+        .file-tree .is-folder>span:before {
+            content: "\f07b";
+            font-family: FontAwesome;
+            margin-right: 8px;
+            color: #8b949e;
+            cursor: pointer;
+            display: inline-block;
+            width: 18px
+        }
+        
+        .file-tree .is-folder.open>span:before {
+            content: "\f07c"
+        }
+        
+        .file-tree .is-folder.open>ul {
+            display: block
+        }
+        
+        .file-tree .is-file>span {
+            display: inline-block;
+            min-width: 120px
+        }
+        
+        .file-tree .is-file>span:before {
+            content: "\f016";
+            font-family: FontAwesome;
+            margin-right: 8px;
+            color: #bec7d2;
+            cursor: pointer;
+            display: inline-block;
+            width: 18px
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="file-tree">
+        <ul>
+            <li class="is-file"><span>1.php</span></li>
+            <li class="is-file"><span>10.php</span></li>
+            <li class="is-file"><span>11.php</span></li>
+            <li class="is-file"><span>2.php</span></li>
+            <li class="is-file"><span>3.php</span></li>
+            <li class="is-file"><span>4.php</span></li>
+            <li class="is-file"><span>6.php</span></li>
+            <li class="is-file"><span>7.php</span></li>
+            <li class="is-file"><span>8.php</span></li>
+            <li class="is-file"><span>9.php</span></li>
+            <li class="is-file"><span>file.php</span></li>
+            <li class="is-file"><span>geodata.php</span></li>
+            <li class="is-file"><span>mac.php</span></li>
+            <li class="is-folder"><span>test_app</span>
+                <ul>
+                    <li class="is-file"><span>1.php</span></li>
+                    <li class="is-file"><span>10.php</span></li>
+                    <li class="is-file"><span>2.php</span></li>
+                    <li class="is-file"><span>3.php</span></li>
+                    <li class="is-file"><span>4.php</span></li>
+                    <li class="is-file"><span>5.php</span></li>
+                    <li class="is-file"><span>6.php</span></li>
+                    <li class="is-file"><span>7.php</span></li>
+                    <li class="is-file"><span>8.php</span></li>
+                    <li class="is-file"><span>9.php</span></li>
+                    <li class="is-folder"><span>css</span>
+                        <ul>
+                            <li class="is-file"><span>style.css</span></li>
+                        </ul>
+                    </li>
+                    <li class="is-file"><span>functions.php</span></li>
+                    <li class="is-file"><span>home.php</span></li>
+                    <li class="is-folder"><span>images</span>
+                        <ul>
+                            <li class="is-file"><span>flash-logo.png</span></li>
+                            <li class="is-file"><span>quicktime-logo.gif</span></li>
+                            <li class="is-file"><span>t_1.jpg</span></li>
+                            <li class="is-file"><span>t_2.jpg</span></li>
+                            <li class="is-file"><span>t_3.jpg</span></li>
+                            <li class="is-file"><span>t_4.jpg</span></li>
+                            <li class="is-file"><span>t_5.jpg</span></li>
+                        </ul>
+                    </li>
+                    <li class="is-folder"><span>includes</span>
+                        <ul>
+                            <li class="is-file"><span>footer.php</span></li>
+                            <li class="is-file"><span>header.php</span></li>
+                            <li class="is-file"><span>navigation.txt</span></li>
+                        </ul>
+                    </li>
+                    <li class="is-file"><span>index.php</span></li>
+                    <li class="is-folder"><span>js</span>
+                        <ul>
+                            <li class="is-file"><span>myscript.js</span></li>
+                            <li class="is-file"><span>scripts.js</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="is-file"><span>text.php</span></li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(".file-tree li.is-file > span").on("click", function(a) {
+            a.stopPropagation()
+        })
+        $(".file-tree li.is-folder > span").on("click", function(a) {
+            $(this).parent("li").find("ul:first").slideToggle(400, function() {
+                $(this).parent("li").toggleClass("open")
+            }), a.stopPropagation()
+        })
+    </script>
+</body>
+
+</html>
