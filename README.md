@@ -94,8 +94,8 @@ open your edtor and insert this code
 
 <pre>
 [file-tree json="your json code here"][/file-tree]
-<pre>
+</pre>
 
-
+# thank you
 <a href="https://github.com/alash3al">Mohammed Al Ashaal</a>
 <a href="https://github.com/alhoseany">alhoseany</a>
