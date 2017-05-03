@@ -97,6 +97,5 @@ open your edtor and insert this code
 <pre>
 
 
-# thank you
 <a href="https://github.com/alash3al">Mohammed Al Ashaal</a>
 <a href="https://github.com/alhoseany">alhoseany</a>
