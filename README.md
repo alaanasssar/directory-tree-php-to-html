@@ -44,10 +44,7 @@ and this code can make a shortcode
 <pre>
 function file_tree_func( $atts, $content = "" ) {
          $array = array (
-        '<p>' => '', 
-        '</p>' => '', 
-        '<br />' => ''
-        );
+        '<p>' => '','</p>' => '','<br />' => '');
          $atts = shortcode_atts( array(
     		'json' => ''
     	), $atts, 'file_tree_func' );
@@ -90,5 +87,16 @@ function file_tree_func( $atts, $content = "" ) {
             
 }
 add_shortcode( 'file-tree', 'file_tree_func' );
-
 </pre>
+
+#how to use
+open your edtor and insert this code
+
+<pre>
+[file-tree json="your json code here"][/file-tree]
+<pre>
+
+
+# thank you
+[https://github.com/alash3al/](Mohammed Al Ashaal)
+[https://github.com/alhoseany](alhoseany)
