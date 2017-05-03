@@ -89,7 +89,7 @@ function file_tree_func( $atts, $content = "" ) {
 add_shortcode( 'file-tree', 'file_tree_func' );
 </pre>
 
-*how to use
+* how to use
 open your edtor and insert this code
 
 <pre>
