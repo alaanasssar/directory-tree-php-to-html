@@ -1,4 +1,4 @@
-# Directory-tree-php-to-html
+# Directory tree php to html
 convert directory to html file by php
 
 i try to find any way to convert directory to html array or json code and i couldn't find any way, so i try to create a php function that create a directory to json code.
