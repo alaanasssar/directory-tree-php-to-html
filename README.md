@@ -7,7 +7,7 @@ And i turn this code into html.
 
 # How to use 
 * Open file json.php in the directory you want to run.
-<pre>
+```php
  function dir_tree($dir, $as_json = false) {
             $files = [];
             foreach( glob($dir . "./*") as $file ) {
@@ -28,10 +28,12 @@ And i turn this code into html.
             fclose($fp);
             echo 'File "Json-Text.txt" successfully created.';
         }
-</pre>
+```
 
 * You will have a text file called 'Json-Text.txt'.
-<pre>{".\/.\/New folder":[],".\/.\/file.php":".\/.\/file.php",".\/.\/geodata.php":".\/.\/geodata.php",".\/.\/index.html":".\/.\/index.html",".\/.\/index.php":".\/.\/index.php",".\/.\/mac.php":".\/.\/mac.php",".\/.\/old":{".\/.\/old.\/00.php":".\/.\/old.\/00.php",".\/.\/old.\/1.php":".\/.\/old.\/1.php",".\/.\/old.\/10.php":".\/.\/old.\/10.php",".\/.\/old.\/11.php":".\/.\/old.\/11.php",".\/.\/old.\/2.php":".\/.\/old.\/2.php",".\/.\/old.\/3.php":".\/.\/old.\/3.php",".\/.\/old.\/4.php":".\/.\/old.\/4.php",".\/.\/old.\/6.php":".\/.\/old.\/6.php",".\/.\/old.\/7.php":".\/.\/old.\/7.php",".\/.\/old.\/8.php":".\/.\/old.\/8.php",".\/.\/old.\/9.php":".\/.\/old.\/9.php"},".\/.\/test_app":{".\/.\/test_app.\/1.php":".\/.\/test_app.\/1.php",".\/.\/test_app.\/10.php":".\/.\/test_app.\/10.php",".\/.\/test_app.\/2.php":".\/.\/test_app.\/2.php",".\/.\/test_app.\/3.php":".\/.\/test_app.\/3.php",".\/.\/test_app.\/4.php":".\/.\/test_app.\/4.php",".\/.\/test_app.\/5.php":".\/.\/test_app.\/5.php",".\/.\/test_app.\/6.php":".\/.\/test_app.\/6.php",".\/.\/test_app.\/7.php":".\/.\/test_app.\/7.php",".\/.\/test_app.\/8.php":".\/.\/test_app.\/8.php",".\/.\/test_app.\/9.php":".\/.\/test_app.\/9.php",".\/.\/test_app.\/css":{".\/.\/test_app.\/css.\/style.css":".\/.\/test_app.\/css.\/style.css"},".\/.\/test_app.\/functions.php":".\/.\/test_app.\/functions.php",".\/.\/test_app.\/home.php":".\/.\/test_app.\/home.php",".\/.\/test_app.\/images":{".\/.\/test_app.\/images.\/flash-logo.png":".\/.\/test_app.\/images.\/flash-logo.png",".\/.\/test_app.\/images.\/quicktime-logo.gif":".\/.\/test_app.\/images.\/quicktime-logo.gif",".\/.\/test_app.\/images.\/t_1.jpg":".\/.\/test_app.\/images.\/t_1.jpg",".\/.\/test_app.\/images.\/t_2.jpg":".\/.\/test_app.\/images.\/t_2.jpg",".\/.\/test_app.\/images.\/t_3.jpg":".\/.\/test_app.\/images.\/t_3.jpg",".\/.\/test_app.\/images.\/t_4.jpg":".\/.\/test_app.\/images.\/t_4.jpg",".\/.\/test_app.\/images.\/t_5.jpg":".\/.\/test_app.\/images.\/t_5.jpg"},".\/.\/test_app.\/includes":{".\/.\/test_app.\/includes.\/footer.php":".\/.\/test_app.\/includes.\/footer.php",".\/.\/test_app.\/includes.\/header.php":".\/.\/test_app.\/includes.\/header.php",".\/.\/test_app.\/includes.\/navigation.txt":".\/.\/test_app.\/includes.\/navigation.txt"},".\/.\/test_app.\/index.php":".\/.\/test_app.\/index.php",".\/.\/test_app.\/js":{".\/.\/test_app.\/js.\/myscript.js":".\/.\/test_app.\/js.\/myscript.js",".\/.\/test_app.\/js.\/scripts.js":".\/.\/test_app.\/js.\/scripts.js"}},".\/.\/text.php":".\/.\/text.php",".\/.\/url":{".\/.\/url.\/src":{".\/.\/url.\/src.\/base_facebook.php":".\/.\/url.\/src.\/base_facebook.php",".\/.\/url.\/src.\/facebook.php":".\/.\/url.\/src.\/facebook.php",".\/.\/url.\/src.\/fb_ca_chain_bundle.crt":".\/.\/url.\/src.\/fb_ca_chain_bundle.crt",".\/.\/url.\/src.\/index.php":".\/.\/url.\/src.\/index.php"},".\/.\/url.\/url.php":".\/.\/url.\/url.php"},".\/.\/url.zip":".\/.\/url.zip"}</pre>
+``` json
+{".\/.\/New folder":[],".\/.\/file.php":".\/.\/file.php",".\/.\/geodata.php":".\/.\/geodata.php",".\/.\/index.html":".\/.\/index.html",".\/.\/index.php":".\/.\/index.php",".\/.\/mac.php":".\/.\/mac.php",".\/.\/old":{".\/.\/old.\/00.php":".\/.\/old.\/00.php",".\/.\/old.\/1.php":".\/.\/old.\/1.php",".\/.\/old.\/10.php":".\/.\/old.\/10.php",".\/.\/old.\/11.php":".\/.\/old.\/11.php",".\/.\/old.\/2.php":".\/.\/old.\/2.php",".\/.\/old.\/3.php":".\/.\/old.\/3.php",".\/.\/old.\/4.php":".\/.\/old.\/4.php",".\/.\/old.\/6.php":".\/.\/old.\/6.php",".\/.\/old.\/7.php":".\/.\/old.\/7.php",".\/.\/old.\/8.php":".\/.\/old.\/8.php",".\/.\/old.\/9.php":".\/.\/old.\/9.php"},".\/.\/test_app":{".\/.\/test_app.\/1.php":".\/.\/test_app.\/1.php",".\/.\/test_app.\/10.php":".\/.\/test_app.\/10.php",".\/.\/test_app.\/2.php":".\/.\/test_app.\/2.php",".\/.\/test_app.\/3.php":".\/.\/test_app.\/3.php",".\/.\/test_app.\/4.php":".\/.\/test_app.\/4.php",".\/.\/test_app.\/5.php":".\/.\/test_app.\/5.php",".\/.\/test_app.\/6.php":".\/.\/test_app.\/6.php",".\/.\/test_app.\/7.php":".\/.\/test_app.\/7.php",".\/.\/test_app.\/8.php":".\/.\/test_app.\/8.php",".\/.\/test_app.\/9.php":".\/.\/test_app.\/9.php",".\/.\/test_app.\/css":{".\/.\/test_app.\/css.\/style.css":".\/.\/test_app.\/css.\/style.css"},".\/.\/test_app.\/functions.php":".\/.\/test_app.\/functions.php",".\/.\/test_app.\/home.php":".\/.\/test_app.\/home.php",".\/.\/test_app.\/images":{".\/.\/test_app.\/images.\/flash-logo.png":".\/.\/test_app.\/images.\/flash-logo.png",".\/.\/test_app.\/images.\/quicktime-logo.gif":".\/.\/test_app.\/images.\/quicktime-logo.gif",".\/.\/test_app.\/images.\/t_1.jpg":".\/.\/test_app.\/images.\/t_1.jpg",".\/.\/test_app.\/images.\/t_2.jpg":".\/.\/test_app.\/images.\/t_2.jpg",".\/.\/test_app.\/images.\/t_3.jpg":".\/.\/test_app.\/images.\/t_3.jpg",".\/.\/test_app.\/images.\/t_4.jpg":".\/.\/test_app.\/images.\/t_4.jpg",".\/.\/test_app.\/images.\/t_5.jpg":".\/.\/test_app.\/images.\/t_5.jpg"},".\/.\/test_app.\/includes":{".\/.\/test_app.\/includes.\/footer.php":".\/.\/test_app.\/includes.\/footer.php",".\/.\/test_app.\/includes.\/header.php":".\/.\/test_app.\/includes.\/header.php",".\/.\/test_app.\/includes.\/navigation.txt":".\/.\/test_app.\/includes.\/navigation.txt"},".\/.\/test_app.\/index.php":".\/.\/test_app.\/index.php",".\/.\/test_app.\/js":{".\/.\/test_app.\/js.\/myscript.js":".\/.\/test_app.\/js.\/myscript.js",".\/.\/test_app.\/js.\/scripts.js":".\/.\/test_app.\/js.\/scripts.js"}},".\/.\/text.php":".\/.\/text.php",".\/.\/url":{".\/.\/url.\/src":{".\/.\/url.\/src.\/base_facebook.php":".\/.\/url.\/src.\/base_facebook.php",".\/.\/url.\/src.\/facebook.php":".\/.\/url.\/src.\/facebook.php",".\/.\/url.\/src.\/fb_ca_chain_bundle.crt":".\/.\/url.\/src.\/fb_ca_chain_bundle.crt",".\/.\/url.\/src.\/index.php":".\/.\/url.\/src.\/index.php"},".\/.\/url.\/url.php":".\/.\/url.\/url.php"},".\/.\/url.zip":".\/.\/url.zip"}
+```
 * edit index.php file and insert the 'Json-Text.txt' content into $json variable
 
 ![alt text](http://nasssar.me/wp-content/uploads/2017/05/newww.png)
@@ -41,7 +43,7 @@ And i turn this code into html.
 
 and this code can make a shortcode.
 
-<pre>
+```php
 function file_tree_func( $atts, $content = "" ) {
          $array = array (
         '<p>' => '','</p>' => '','<br />' => '');
@@ -87,14 +89,14 @@ function file_tree_func( $atts, $content = "" ) {
             
 }
 add_shortcode( 'file-tree', 'file_tree_func' );
-</pre>
+```
 
 * How to use
 open your wordpress eidtor and insert this code
 
-<pre>
+```
 [file-tree json="your json code here"][/file-tree]
-</pre>
+```
 
 # thank you
 <a href="https://github.com/alhoseany">alhoseany</a><br>
