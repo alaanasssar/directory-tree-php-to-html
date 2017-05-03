@@ -36,3 +36,59 @@ and i turn this code into a html.
 
 ![alt text](http://nasssar.me/wp-content/uploads/2017/05/newww.png)
 
+
+# wordpress
+
+and this code can make a shortcode
+
+<pre>
+function file_tree_func( $atts, $content = "" ) {
+         $array = array (
+        '<p>' => '', 
+        '</p>' => '', 
+        '<br />' => ''
+        );
+         $atts = shortcode_atts( array(
+    		'json' => ''
+    	), $atts, 'file_tree_func' );
+        $content = strtr($content, $array);
+
+        if(is_single()){
+            
+                function foreach_files($files){
+                    $files =  str_replace("././","",$files);
+                    $webwecho = '';
+                     foreach ($files as $k => $file){   
+                        $file_cleaned =  str_replace((basename($k)) . "./","",$file);             
+                         if(is_array($file)){
+                            $webwecho .= '<li class="is-folder"><span>';
+                            $webwecho .= basename($k);
+                            $webwecho .= '</span>';
+                            $webwecho .='<ul>';
+                            $webwecho .= foreach_files($file_cleaned);
+                            $webwecho .='</ul></li>';
+                         }else {
+                             $webwecho .= '<li class="is-file"><span>'.basename($k).'</span>';
+                             $webwecho .= '</li>';
+                         }
+                    }
+                    return $webwecho;
+                }
+
+                 $jsoncode = json_decode($atts['json'], true);
+  
+                     $webwechoo = '';
+                    $webwechoo .= '<div class="file-tree"> <ul>';
+                    $webwechoo .= foreach_files($jsoncode);
+                    $webwechoo .= '</ul> </div>';
+                    return $webwechoo;
+
+        }
+        
+
+  
+            
+}
+add_shortcode( 'file-tree', 'file_tree_func' );
+
+</pre>
