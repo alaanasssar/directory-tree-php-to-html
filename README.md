@@ -98,5 +98,6 @@ open your edtor and insert this code
 
 
 # thank you
-[https://github.com/alash3al/](Mohammed Al Ashaal)
+
+[Mohammed Al Ashaal](https://github.com/alash3al/)
 [https://github.com/alhoseany](alhoseany)
